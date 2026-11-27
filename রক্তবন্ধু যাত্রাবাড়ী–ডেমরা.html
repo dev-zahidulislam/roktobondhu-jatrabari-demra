@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="যাত্রাবাড়ী ও ডেমরা এলাকার স্বেচ্ছাসেবী রক্তদাতা খুঁজুন এবং ডোনার হিসেবে নিবন্ধন করুন।">
+<meta name="theme-color" content="#b51e3b">
+<title>রক্তবন্ধু যাত্রাবাড়ী–ডেমরা | আপনার এলাকার রক্তদাতা</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23b51e3b'/%3E%3Cpath d='M32 9C27 20 15 29 15 41a17 17 0 0 0 34 0C49 29 37 20 32 9Z' fill='white'/%3E%3Cpath d='M24 42c.4 4 3 6 7 6.5' stroke='%23b51e3b' stroke-width='3.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap">
+<style>
+:root{--bg:#fffaf8;--card:#fff;--ink:#2a2229;--mut:#766f79;--line:#f0dfe2;--red:#b51e3b;--red2:#e3445e;--deep:#74152b;--rose:#fff0f2;--rose2:#ffe0e6;--green:#16845b;--sh:0 18px 50px rgba(116,21,43,.10);--sh2:0 8px 24px rgba(116,21,43,.09);color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#150e17;--card:#21172a;--ink:#f8edf0;--mut:#c5b2ba;--line:#3a2a36;--red:#ff5a77;--red2:#ff7b92;--rose:#2f1e29;--rose2:#432634;--sh:0 18px 50px rgba(0,0,0,.4);--sh2:0 8px 24px rgba(0,0,0,.3);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;line-height:1.7;-webkit-text-size-adjust:100%;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:40}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--red2);outline-offset:2px;border-radius:8px}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+.skip{position:absolute;left:12px;top:-60px;background:var(--red);color:#fff;padding:8px 14px;border-radius:8px;z-index:100}.skip:focus{top:8px}
+.lat{font-family:Manrope,"Hind Siliguri",sans-serif;font-weight:800}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:1.3rem;line-height:1.1}
+.brand small{display:block;font-size:.72rem;font-weight:500;color:var(--mut);margin-top:3px}
+.mk{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,var(--red2),var(--deep));display:grid;place-items:center;box-shadow:0 8px 20px rgba(181,30,59,.3);transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.brand:hover .mk{transform:rotate(-10deg) scale(1.08)}.mk svg{width:23px}
+.links{display:flex;align-items:center;gap:4px}
+.links>a{position:relative;padding:8px 12px;font-size:.95rem;color:var(--mut);transition:color .2s}
+.links>a::after{content:"";position:absolute;left:12px;right:12px;bottom:3px;height:2px;border-radius:2px;background:var(--red);transform:scaleX(0);transition:transform .25s}
+.links>a:hover{color:var(--red)}.links>a:hover::after{transform:scaleX(1)}
+.ib{width:42px;height:42px;border-radius:13px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:1.05rem;display:grid;place-items:center;transition:background .2s,transform .25s}
+.ib:hover{background:var(--rose);transform:rotate(15deg)}.menu{display:none}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;padding:13px 22px;font-weight:700;cursor:pointer;transition:transform .2s,box-shadow .25s,background .2s;white-space:nowrap}
+.btn::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.32),transparent);transform:skewX(-20deg);transition:left .55s}
+.btn:hover::after{left:130%}.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
+.bp{background:linear-gradient(120deg,var(--red2),var(--red));color:#fff;box-shadow:0 10px 22px rgba(181,30,59,.25)}.bp:hover{box-shadow:0 14px 28px rgba(181,30,59,.38)}
+.bl{background:var(--card);color:var(--red);border:1px solid var(--line)}.bl:hover{border-color:var(--red)}
+.bg{background:#18a066;color:#fff}.bw{background:#fff;color:var(--red)}
+.bs{padding:9px 16px;font-size:.92rem;border-radius:12px}
+
+.hero{position:relative;overflow:hidden;padding:64px 0 96px;background:radial-gradient(800px 440px at 90% 0,var(--rose2),transparent 62%),var(--bg)}
+.hero::before{content:"";position:absolute;width:480px;height:480px;border:1px solid var(--rose2);border-radius:50%;right:-160px;top:-240px}
+.hg{display:grid;grid-template-columns:1.12fr .88fr;gap:40px;align-items:center;position:relative}
+.tag{display:inline-flex;align-items:center;gap:9px;background:var(--rose);color:var(--red);padding:7px 14px;border-radius:99px;font-weight:600;font-size:.86rem}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--red2);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(227,68,94,.5)}100%{box-shadow:0 0 0 11px rgba(227,68,94,0)}}
+h1{font-size:clamp(2.3rem,5.4vw,4.1rem);line-height:1.2;margin:18px 0 14px;font-weight:700;letter-spacing:-.015em}
+h1 span{display:block;overflow:hidden}h1 i{display:block;font-style:normal;animation:rise .85s cubic-bezier(.2,.8,.2,1) both}
+h1 span:last-child i{color:var(--red);animation-delay:.12s}
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+.lead{font-size:1.1rem;color:var(--mut);max-width:540px;margin:0;animation:fade .8s .3s both}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.vis{position:relative;display:grid;place-items:center;min-height:380px}
+.orb{position:relative;width:min(340px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 28%,var(--card),var(--rose2));box-shadow:inset 0 0 0 1px var(--line),0 28px 60px rgba(181,30,59,.16);display:grid;place-items:center;animation:float 6s ease-in-out infinite}
+.orb::before{content:"";position:absolute;inset:20px;border:1px dashed var(--red2);opacity:.4;border-radius:50%;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes float{50%{transform:translateY(-11px)}}
+.drop{width:60%;filter:drop-shadow(0 16px 18px rgba(116,21,43,.28));overflow:visible}
+.liq{animation:fill 2.2s .4s cubic-bezier(.3,.7,.2,1) both}@keyframes fill{from{transform:translateY(190px)}to{transform:none}}
+.wv{animation:wave 4.5s linear infinite}.wv2{animation:wave 7s linear infinite reverse;opacity:.55}@keyframes wave{to{transform:translateX(-200px)}}
+.dcnt{position:absolute;left:0;right:0;bottom:25%;text-align:center;color:#fff;line-height:1.1;animation:fade .8s 1.5s both}
+.dcnt b{display:block;font-size:clamp(2rem,5vw,2.8rem);font-weight:700}.dcnt small{font-size:.88rem;opacity:.92}
+.chip{position:absolute;background:var(--card);border:1px solid var(--line);box-shadow:var(--sh2);border-radius:16px;padding:10px 14px;display:flex;gap:10px;align-items:center;animation:float 5.5s ease-in-out infinite;transition:transform .25s}
+.chip:hover{transform:scale(1.05) rotate(-1.5deg)}.chip.a{left:0;top:48px}.chip.b{right:0;bottom:50px;animation-delay:-2.5s}
+.chip em{width:34px;height:34px;border-radius:11px;background:var(--rose);display:grid;place-items:center;font-style:normal}
+.chip b{display:block;font-size:.9rem;line-height:1.25}.chip small{color:var(--mut);font-size:.74rem}
+
+.finder{position:relative;z-index:3;margin-top:-52px}
+.fp{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--sh)}
+.fgr{display:grid;grid-template-columns:1fr 1fr auto;gap:14px;align-items:end}
+.fgr label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px}
+select,input,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:13px;padding:12px 14px;min-height:50px;outline:none;transition:border-color .2s,box-shadow .2s}
+select:focus,input:focus,textarea:focus{border-color:var(--red2);box-shadow:0 0 0 4px rgba(227,68,94,.14)}
+.fgr .btn{height:50px}.hint{font-size:.82rem;color:var(--mut);margin:14px 0 0}
+
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.si{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;transition:transform .25s,box-shadow .25s}
+.si:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.si i{font-style:normal;width:44px;height:44px;border-radius:14px;background:var(--rose);display:grid;place-items:center;font-size:1.2rem;flex:none}
+.si strong{display:block;font-size:1.5rem;line-height:1.1;color:var(--red)}.si small{color:var(--mut);font-size:.8rem}
+
+section{padding:72px 0}
+.sh{margin:0 0 28px;max-width:620px}.sh h2{font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.25;margin:0 0 6px}.sh p{margin:0;color:var(--mut)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.bar h3{margin:0;font-size:1.3rem}
+.cp{background:var(--rose);color:var(--red);font-weight:700;font-size:.86rem;padding:5px 14px;border-radius:99px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dc{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;transition:transform .28s,box-shadow .28s,border-color .28s;animation:cin .5s calc(var(--i)*60ms) both}
+@keyframes cin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.dc::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--red2),#f5a6b2);transform:scaleY(0);transform-origin:bottom;transition:transform .3s}
+.dc:hover{transform:translateY(-6px);box-shadow:var(--sh2);border-color:var(--rose2)}.dc:hover::before{transform:scaleY(1)}
+.dt{display:flex;align-items:center;gap:12px}
+.av{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,var(--rose),var(--rose2));color:var(--red);font-weight:700;font-size:1.2rem;display:grid;place-items:center;flex:none;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.dc:hover .av{transform:scale(1.12) rotate(-5deg)}
+.dn{font-weight:700;font-size:1.05rem;line-height:1.35;overflow-wrap:anywhere}.dp{font-size:.84rem;color:var(--mut)}
+.bt{margin-left:auto;background:var(--red);color:#fff;border-radius:11px;padding:4px 11px;font-size:1rem}
+.dc .btn{width:100%;margin-top:14px}
+.empty{grid-column:1/-1;text-align:center;border:1.5px dashed var(--rose2);border-radius:20px;padding:36px 18px;color:var(--mut);background:var(--card)}
+.empty b{display:block;color:var(--ink);font-size:1.15rem;margin-bottom:4px}.empty .btn{margin-top:14px}
+.more{display:flex;justify-content:center;margin-top:22px}
+
+.alt{background:var(--card);border-block:1px solid var(--line)}
+.gg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gt{position:relative;overflow:hidden;text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:18px;padding:18px 16px;cursor:pointer;transition:transform .25s,box-shadow .25s,background .3s,border-color .3s}
+.gt b{display:block;font-size:2rem;line-height:1.15;color:var(--red);transition:color .3s}.gt small{color:var(--mut);transition:color .3s}
+.gt:hover{background:linear-gradient(135deg,var(--red2),var(--red));border-color:var(--red);transform:translateY(-5px);box-shadow:0 16px 30px rgba(181,30,59,.28)}
+.gt:hover b,.gt:hover small{color:#fff}
+.gf{margin:18px 0 0;font-size:.86rem;color:var(--mut)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;transition:transform .3s,box-shadow .3s}
+.st:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.sn{width:42px;height:42px;border-radius:50%;background:var(--rose);color:var(--red);display:grid;place-items:center;font-weight:700;font-size:1.15rem;transition:background .3s,color .3s}
+.st:hover .sn{background:var(--red);color:#fff}
+.st h3{margin:14px 0 4px;font-size:1.15rem}.st p{margin:0;color:var(--mut);font-size:.95rem}
+.warn{display:flex;gap:14px;background:#fff7ed;border:1px solid #f5dcb4;border-radius:20px;padding:20px;margin-top:24px}
+:root[data-theme="dark"] .warn{background:#2b2113;border-color:#5a4320}
+.warn>span{font-size:1.6rem;animation:wob 3s ease-in-out infinite}@keyframes wob{0%,88%,100%{transform:none}92%{transform:rotate(-14deg)}96%{transform:rotate(14deg)}}
+.warn h3{margin:0 0 4px;color:#8a4c0c}.warn p{margin:0;color:#765b3e;font-size:.95rem}
+:root[data-theme="dark"] .warn h3,:root[data-theme="dark"] .warn p{color:#f3d49b}
+
+.cta{padding:8px 0 72px}
+.cb{position:relative;overflow:hidden;border-radius:26px;padding:42px 44px;background:linear-gradient(120deg,var(--deep),#b01c3b 62%,#e3445e);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:22px}
+.cb::before,.cb::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;border:1px solid rgba(255,255,255,.22);right:14%;top:-140px;animation:ring 6s ease-out infinite}.cb::after{animation-delay:3s}
+@keyframes ring{from{transform:scale(.6);opacity:1}to{transform:scale(2.4);opacity:0}}
+.cb h2{margin:0 0 6px;font-size:clamp(1.5rem,3vw,2rem);position:relative}.cb p{margin:0;color:#ffd9df;position:relative}.cb .btn{position:relative}
+
+footer{position:relative;background:linear-gradient(160deg,#3b0c19,#1d1118 70%);color:#e9d9de;margin-top:20px}
+footer::before{content:"";position:absolute;left:0;right:0;top:-1px;height:30px;background:var(--bg);clip-path:ellipse(60% 100% at 50% 0)}
+.fi{padding:78px 0 24px}
+.fgr2{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:36px;padding-bottom:34px}
+.fb{display:flex;align-items:center;gap:11px;font-size:1.4rem;font-weight:700;color:#fff}
+.fb .mk{width:40px;height:40px;box-shadow:none}
+.fc{color:#c9b3ba;font-size:.95rem;max-width:380px;margin:12px 0 0}
+footer h4{margin:0 0 12px;color:#fff;font-size:1.05rem}
+.fl a{display:block;padding:4px 0;color:#c9b3ba;transition:color .2s,transform .2s}.fl a:hover{color:#fff;transform:translateX(5px)}
+.fk{display:flex;flex-wrap:wrap;gap:10px}
+.fk a{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,255,255,.28);border-radius:13px;padding:10px 16px;color:#fff;font-weight:600;transition:background .2s,transform .2s,border-color .2s}
+.fk a:hover{background:rgba(255,255,255,.12);border-color:#fff;transform:translateY(-3px)}
+.fk-n{font-size:.88rem;color:#c9b3ba;margin:12px 0 0}
+.cr{border-top:1px solid rgba(255,255,255,.14);padding-top:18px;font-size:.84rem;color:#b9a3aa;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.top{display:inline-flex;gap:6px;align-items:center;border:1px solid rgba(255,255,255,.28);border-radius:12px;background:none;color:#fff;padding:7px 14px;cursor:pointer;transition:background .2s}.top:hover{background:rgba(255,255,255,.14)}
+
+.ov{position:fixed;inset:0;background:rgba(29,17,24,.62);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);z-index:60;display:none;align-items:center;justify-content:center;padding:16px}
+.ov.on{display:flex;animation:fade .2s both}
+.dlg{width:min(620px,100%);max-height:92vh;overflow:auto;background:var(--card);border-radius:24px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.35);animation:pop .35s cubic-bezier(.3,1.4,.5,1) both}
+@keyframes pop{from{transform:translateY(24px) scale(.95);opacity:0}to{transform:none;opacity:1}}
+.dlg.w{width:min(460px,100%);border-top:5px solid var(--red)}.dlg.w h2{margin:0 0 8px;font-size:1.4rem;color:var(--red)}.dlg.w ul{padding-left:20px;margin:10px 0 18px}.dlg.w li{margin-bottom:6px}
+.dh{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:4px}.dh h2{margin:0;font-size:1.4rem}
+.x{width:38px;height:38px;border-radius:12px;border:0;background:var(--rose);color:var(--red);font-size:1.4rem;cursor:pointer;transition:transform .25s}.x:hover{transform:rotate(90deg)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:14px}.full{grid-column:1/-1}
+.f label{display:block;font-weight:600;font-size:.9rem;margin-bottom:5px}
+.ck{display:flex;gap:10px;font-size:.88rem;color:var(--mut)}.ck input{accent-color:var(--red);width:20px;min-height:20px;height:20px;flex:none;margin-top:3px;padding:0}
+.hp{position:absolute;left:-9999px;opacity:0}
+.dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.it{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:10px 13px;transition:transform .2s,border-color .2s}.it:hover{transform:translateY(-2px);border-color:var(--red2)}
+.it small{display:block;color:var(--mut);font-size:.74rem}.it b{overflow-wrap:anywhere}.it a{color:var(--red);font-weight:700}
+.da{display:flex;gap:10px}.da .btn{flex:1}.nt{font-size:.85rem;color:var(--mut);margin:12px 0 0}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:#2a1d26;color:#fff;padding:12px 18px;border-radius:14px;box-shadow:var(--sh);opacity:0;pointer-events:none;z-index:90;transition:.3s;max-width:calc(100% - 28px);text-align:center;font-size:.92rem}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.mbar{display:none}
+[hidden]{display:none!important}
+
+@media (max-width:900px){.hg{grid-template-columns:1fr;gap:10px}.vis{display:none}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.fgr2{grid-template-columns:1fr 1fr}.fgr2>div:first-child{grid-column:1/-1}}
+@media (max-width:700px){
+.wrap{width:min(100% - 28px,560px)}body{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+.nav{height:64px}.brand{font-size:1.15rem}.mk{width:38px;height:38px}
+.menu{display:grid}.links{display:none;position:absolute;left:14px;right:14px;top:72px;flex-direction:column;align-items:stretch;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:var(--sh)}.links.on{display:flex;animation:fade .25s both}.links>a{padding:12px}.links .btn{display:none}
+.hero{padding:34px 0 80px}h1{font-size:2.3rem}.lead{font-size:1.02rem}
+.fp{padding:16px;border-radius:20px}.fgr{grid-template-columns:1fr;gap:12px}.fgr .btn{width:100%}
+.strip{gap:8px}.si{flex-direction:column;text-align:center;gap:6px;padding:12px 6px}.si i{width:38px;height:38px}.si strong{font-size:1.25rem}.si small{font-size:.72rem}
+section{padding:48px 0}.grid{grid-template-columns:1fr}.gg{grid-template-columns:1fr 1fr;gap:10px}.gt{padding:14px}.gt b{font-size:1.7rem}
+.cb{flex-direction:column;align-items:flex-start;padding:30px 24px;border-radius:22px}.cb .btn{width:100%}
+.fi{padding-top:70px}.cr{flex-direction:column;align-items:flex-start}
+.ov{align-items:flex-end;padding:0}.dlg{width:100%;max-height:94vh;border-radius:24px 24px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px));animation:sheet .35s cubic-bezier(.2,.9,.3,1) both}
+@keyframes sheet{from{transform:translateY(100%)}to{transform:none}}
+.fgrid,.dl{grid-template-columns:1fr}.toast{bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+.mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:35;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px))}
+.mbar .btn{width:100%;padding:12px 8px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#search">মূল অংশে যান</a>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><span class="mk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.5C9.7 6.1 5 10.7 5 15a7 7 0 0 0 14 0c0-4.3-4.7-8.9-7-12.5Z" fill="#fff"/><path d="M8.5 15.5c.2 1.8 1.4 2.8 3.1 3" stroke="#b51e3b" stroke-width="1.6" stroke-linecap="round"/></svg></span><span>রক্তবন্ধু<small>যাত্রাবাড়ী–ডেমরা</small></span></a>
+  <nav class="links" id="links" aria-label="প্রধান মেনু"><a href="#home">ডোনার খুঁজুন</a><a href="#groups">রক্তের গ্রুপ</a><a href="#how">কীভাবে কাজ করে</a><a href="#safety">সতর্কতা</a><button class="btn bp bs" data-open="reg" type="button">ডোনার হোন</button></nav>
+  <div style="display:flex;gap:8px"><button class="ib" id="theme" type="button" aria-label="থিম বদলান">🌙</button><button class="ib menu" id="menu" type="button" aria-label="মেনু খুলুন">☰</button></div>
+</div></header>
+
+<main>
+<section class="hero" id="home"><div class="wrap hg">
+  <div>
+    <span class="tag"><i class="dot"></i>স্থানীয় রক্তদাতা নেটওয়ার্ক</span>
+    <h1><span><i>রক্তের প্রয়োজনে</i></span><span><i>পাশেই আছে আপনার মানুষ</i></span></h1>
+    <p class="lead">যাত্রাবাড়ী ও ডেমরা এলাকার স্বেচ্ছাসেবী রক্তদাতাদের সহজেই খুঁজে নিন। রক্তের গ্রুপ বেছে সার্চ করলেই কাছের ডোনারের তালিকা পাবেন।</p>
+  </div>
+  <div class="vis" aria-hidden="true">
+    <div class="orb">
+      <svg class="drop" viewBox="0 0 200 250"><defs><clipPath id="dc"><path d="M100 8C78 50 24 105 24 160a76 76 0 0 0 152 0C176 105 122 50 100 8Z"/></clipPath><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f16b7d"/><stop offset=".6" stop-color="#c32143"/><stop offset="1" stop-color="#84152e"/></linearGradient></defs>
+        <path d="M100 8C78 50 24 105 24 160a76 76 0 0 0 152 0C176 105 122 50 100 8Z" fill="#fff" opacity=".92"/>
+        <g clip-path="url(#dc)"><g class="liq"><g transform="translate(0,95)"><path class="wv2" d="M0 14Q25 -6 50 14T100 14T150 14T200 14T250 14T300 14T350 14T400 14V220H0Z" fill="#f58a99"/><path class="wv" d="M0 20Q25 0 50 20T100 20T150 20T200 20T250 20T300 20T350 20T400 20V220H0Z" fill="url(#lg)"/></g></g>
+        <path d="M52 140c2-18 13-35 24-50" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".45"/></g></svg>
+      <div class="dcnt"><b id="dc2">০</b><small>নিবন্ধিত ডোনার</small></div>
+    </div>
+    <div class="chip a"><em>📍</em><span><b>নিজের এলাকার ডোনার</b><small>যাত্রাবাড়ী ও ডেমরা</small></span></div>
+    <div class="chip b"><em>🩸</em><span><b>গ্রুপ ধরে খুঁজুন</b><small>৮টি রক্তের গ্রুপ</small></span></div>
+  </div>
+</div></section>
+
+<div class="finder"><div class="wrap">
+  <form class="fp" id="finder">
+    <div class="fgr">
+      <div><label for="sg">রক্তের গ্রুপ</label><select id="sg"><option value="">সব গ্রুপ</option></select></div>
+      <div><label for="su">উপজেলা</label><select id="su"><option value="">যাত্রাবাড়ী ও ডেমরা</option><option>যাত্রাবাড়ী</option><option>ডেমরা</option></select></div>
+      <button class="btn bp" type="submit">ডোনার খুঁজুন ⌕</button>
+    </div>
+    <p class="hint">ℹ️ তালিকায় থাকা মানেই এখনই রক্ত দিতে পারবেন, এমন নয়। কল করে নিশ্চিত হোন।</p>
+  </form>
+  <div class="strip">
+    <div class="si"><i>🩸</i><span><strong id="s1">০</strong><small>তালিকাভুক্ত ডোনার</small></span></div>
+    <div class="si"><i>🧬</i><span><strong>৮</strong><small>রক্তের গ্রুপ</small></span></div>
+    <div class="si"><i>📍</i><span><strong>২</strong><small>স্থানীয় উপজেলা</small></span></div>
+  </div>
+</div></div>
+
+<section id="search" style="padding-bottom:20px"><div class="wrap">
+  <div class="bar" id="rbar" hidden><h3>রক্তদাতার তালিকা</h3><span class="cp" id="rcnt">০ জন</span></div>
+  <div class="grid" id="list"></div>
+  <div class="more" id="more" hidden><button class="btn bl" id="moreb" type="button">আরও দেখুন</button></div>
+</div></section>
+
+<section class="alt" id="groups" style="margin-top:40px"><div class="wrap">
+  <div class="sh"><h2>রক্তের গ্রুপ অনুযায়ী ডোনার</h2><p>কোন গ্রুপে কতজন আছেন দেখুন। যেকোনো গ্রুপে চাপলে সেই গ্রুপের ডোনার খুঁজে দেবে।</p></div>
+  <div class="gg" id="gg"></div>
+  <p class="gf">রক্তের সামঞ্জস্য ও ট্রান্সফিউশনের সিদ্ধান্ত অবশ্যই চিকিৎসক বা হাসপাতাল নেবেন।</p>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <div class="sh"><h2>ব্যবহার করবেন যেভাবে</h2><p>রক্তদাতা খোঁজা ও যুক্ত হওয়া, দুটিই সহজ রাখা হয়েছে।</p></div>
+  <div class="steps">
+    <article class="st"><span class="sn">১</span><h3>গ্রুপ ও এলাকা বাছুন</h3><p>প্রয়োজনীয় রক্তের গ্রুপ ও যাত্রাবাড়ী বা ডেমরা বেছে সার্চ করুন।</p></article>
+    <article class="st"><span class="sn">২</span><h3>ডোনারের সঙ্গে কথা বলুন</h3><p>প্রোফাইল দেখে কল করে ডোনারের বর্তমান অবস্থা জেনে নিন।</p></article>
+    <article class="st"><span class="sn">৩</span><h3>আপনিও যুক্ত হোন</h3><p>নিজের সঠিক তথ্য ও সম্মতি দিয়ে নিবন্ধন করুন। এক নম্বরে একবারই করা যায়।</p></article>
+  </div>
+  <div class="warn" id="safety"><span>⚠️</span><div><h3>প্রতারক থেকে সাবধান থাকুন</h3><p>রক্তদান স্বেচ্ছাসেবী ও বিনামূল্যের। কেউ রক্তের বিনিময়ে টাকা, অগ্রিম বা যাতায়াত খরচ চাইলে লেনদেন করবেন না। ডোনারের পরিচয় ও রক্তের গ্রুপ সরাসরি যাচাই করুন। রক্ত দেওয়ার উপযুক্ততা হাসপাতালের চিকিৎসক নির্ধারণ করবেন।</p></div></div>
+</div></section>
+
+<section class="cta"><div class="wrap"><div class="cb"><div><h2>আপনার রক্তে বাঁচতে পারে একটি জীবন</h2><p>যাত্রাবাড়ী–ডেমরার স্বেচ্ছাসেবী ডোনার নেটওয়ার্কে যুক্ত হোন।</p></div><button class="btn bw" data-open="reg" type="button">ডোনার হিসেবে নিবন্ধন করুন</button></div></div></section>
+</main>
+
+<footer><div class="wrap fi">
+  <div class="fgr2">
+    <div><div class="fb"><span class="mk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.5C9.7 6.1 5 10.7 5 15a7 7 0 0 0 14 0c0-4.3-4.7-8.9-7-12.5Z" fill="#fff"/></svg></span>রক্তবন্ধু যাত্রাবাড়ী–ডেমরা</div><p class="fc">স্থানীয় স্বেচ্ছাসেবী রক্তদাতা ও রক্তপ্রার্থীদের সংযোগের একটি উদ্যোগ। সঠিক তথ্য দিন, নিরাপদে যোগাযোগ করুন, মানবিক থাকুন।</p></div>
+    <div class="fl"><h4>দ্রুত লিংক</h4><a href="#home">ডোনার খুঁজুন</a><a href="#groups">রক্তের গ্রুপ</a><a href="#how">কীভাবে কাজ করে</a><a href="#safety">নিরাপত্তা নির্দেশনা</a></div>
+    <div><h4>যোগাযোগ</h4><div class="fk"><a id="fcall" href="#">📞 কল করুন</a><a id="fwa" href="#" target="_blank" rel="noopener">💬 WhatsApp</a></div><p class="fk-n">তথ্য সরাতে বা কিছু জানাতে অ্যাডমিনকে বার্তা দিন।</p></div>
+  </div>
+  <div class="cr"><span>© ২০২৬ রক্তবন্ধু যাত্রাবাড়ী–ডেমরা || সর্বস্বত্ব সংরক্ষিত।<br>Developed &amp; Maintained by Zahidul Islam</span><button class="top" id="totop" type="button">↑ উপরে যান</button></div>
+</div></footer>
+
+<div class="mbar"><a class="btn bp" href="#home">🔎 ডোনার খুঁজুন</a><button class="btn bl" data-open="reg" type="button">🩸 ডোনার হোন</button></div>
+
+<div class="ov" id="reg" role="dialog" aria-modal="true" aria-labelledby="rt"><div class="dlg">
+  <div class="dh"><h2 id="rt">ডোনার হিসেবে নিবন্ধন</h2><button class="x" data-close type="button" aria-label="বন্ধ করুন">×</button></div>
+  <form id="rf" novalidate><div class="fgrid">
+    <div class="f"><label for="f-n">পূর্ণ নাম *</label><input id="f-n" maxlength="70" autocomplete="name"></div>
+    <div class="f"><label for="f-p">মোবাইল নম্বর *</label><input id="f-p" type="tel" inputmode="numeric" placeholder="01XXXXXXXXX" autocomplete="tel"></div>
+    <div class="f"><label for="f-g">রক্তের গ্রুপ *</label><select id="f-g"><option value="">নির্বাচন করুন</option></select></div>
+    <div class="f"><label for="f-s">জেন্ডার *</label><select id="f-s"><option value="">নির্বাচন করুন</option><option>পুরুষ</option><option>নারী</option><option>অন্যান্য</option></select></div>
+    <div class="f full"><label for="f-u">উপজেলা / থানা *</label><select id="f-u"><option value="">নির্বাচন করুন</option><option>যাত্রাবাড়ী</option><option>ডেমরা</option></select></div>
+    <div class="f full"><label for="f-pm">স্থায়ী ঠিকানা *</label><textarea id="f-pm" rows="2" placeholder="গ্রাম/মহল্লা, ডাকঘর, উপজেলা, জেলা"></textarea></div>
+    <div class="f full"><label for="f-c">বর্তমান ঠিকানা *</label><textarea id="f-c" rows="2" placeholder="বাসা/রোড, মহল্লা, যাত্রাবাড়ী/ডেমরা, ঢাকা"></textarea></div>
+    <div class="f full"><label for="f-t">কোন সময়ে রক্ত দিতে পারবেন? *</label><input id="f-t" maxlength="100" placeholder="যেমন: সকাল ৮টা–দুপুর ১২টা, অথবা বিকেল ৪টার পর"></div>
+    <input class="hp" id="f-w" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label class="ck full"><input type="checkbox" id="f-ok"><span>আমি নিশ্চিত করছি তথ্যগুলো সঠিক এবং ডোনার তালিকায় আমার নাম, মোবাইল নম্বর, রক্তের গ্রুপ ও ঠিকানা প্রকাশে সম্মতি দিচ্ছি।</span></label>
+  </div>
+  <p class="nt" id="fmsg" role="status"></p>
+  <button class="btn bp" id="fgo" type="submit" style="width:100%;margin-top:10px">নিবন্ধন সম্পন্ন করুন</button></form>
+</div></div>
+
+<div class="ov" id="det" role="dialog" aria-modal="true" aria-labelledby="dt"><div class="dlg">
+  <div class="dh"><h2 id="dt">ডোনারের বিস্তারিত</h2><button class="x" data-close type="button" aria-label="বন্ধ করুন">×</button></div>
+  <div id="dbody"></div>
+</div></div>
+
+<div class="ov on" id="warn" role="dialog" aria-modal="true" aria-labelledby="wt"><div class="dlg w">
+  <h2 id="wt">⚠️ প্রতারক থেকে সাবধান!</h2>
+  <ul><li>রক্তদান বিনামূল্যের সেবা। কেউ টাকা, গাড়িভাড়া বা অগ্রিম কিছু চাইলে দেবেন না।</li><li>নম্বর বন্ধ থাকলে, বা ঠিকানা ও রক্তের গ্রুপ ভুল মনে হলে সতর্ক হোন।</li><li>রক্ত দেওয়া-নেওয়ার আগে সরাসরি কথা বলে নিশ্চিত হোন এবং হাসপাতালের নিয়ম মানুন।</li></ul>
+  <button class="btn bp" data-close type="button" style="width:100%">বুঝেছি</button>
+</div></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script type="application/json" id="data">[]</script>
+<script>
+var ADMIN = "8801949139550";
+var API = "PASTE_APPS_SCRIPT_URL_HERE";
+var GROUPS = ["A+","A-","B+","B-","AB+","AB-","O+","O-"];
+var PAGE = 12, shown = PAGE, searched = false, timer;
+var DONORS = [];
+try { DONORS = JSON.parse(document.getElementById("data").textContent) || []; } catch (e) {}
+var $ = function (id) { return document.getElementById(id); };
+var bn = function (n) { return String(n).replace(/[0-9]/g, function (d) { return "০১২৩৪৫৬৭৮৯"[d]; }); };
+var mi = function (g) { return g.replace("-", "−"); };
+function esc(v) { return String(v == null ? "" : v).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+function toEn(s) { return String(s || "").replace(/[০-৯]/g, function (d) { return "০১২৩৪৫৬৭৮৯".indexOf(d); }); }
+function digits(p) { var d = toEn(p).replace(/\D/g, ""); if (d.indexOf("880") === 0) d = d.slice(2); if (d.charAt(0) !== "0") d = "0" + d; return d; }
+function gender(s) { return s === "M" ? "পুরুষ" : s === "F" ? "নারী" : (s || ""); }
+function toast(m) { var t = $("toast"); t.textContent = m; t.classList.add("on"); clearTimeout(timer); timer = setTimeout(function () { t.classList.remove("on"); }, 3400); }
+function countUp(el, to) { var s = Date.now(); (function f() { var p = Math.min(1, (Date.now() - s) / 1000); el.textContent = bn(Math.round(to * (1 - Math.pow(1 - p, 3)))); if (p < 1) requestAnimationFrame(f); })(); }
+
+var root = document.documentElement;
+function setTheme(t) { root.setAttribute("data-theme", t); $("theme").textContent = t === "dark" ? "☀️" : "🌙"; try { localStorage.setItem("rb-theme2", t); } catch (e) {} }
+var saved = null; try { saved = localStorage.getItem("rb-theme2"); } catch (e) {}
+setTheme(saved === "dark" ? "dark" : "light");
+$("theme").addEventListener("click", function () { setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark"); });
+$("menu").addEventListener("click", function () { $("links").classList.toggle("on"); });
+document.querySelectorAll("#links a").forEach(function (a) { a.addEventListener("click", function () { $("links").classList.remove("on"); }); });
+$("totop").addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+
+function openM(id) { $(id).classList.add("on"); document.body.style.overflow = "hidden"; }
+function closeM(el) { el.classList.remove("on"); if (!document.querySelector(".ov.on")) document.body.style.overflow = ""; }
+document.querySelectorAll("[data-open]").forEach(function (b) { b.addEventListener("click", function () { $("links").classList.remove("on"); openM(b.dataset.open); }); });
+document.querySelectorAll(".ov").forEach(function (o) { o.addEventListener("click", function (e) { if (e.target === o || e.target.hasAttribute("data-close")) closeM(o); }); });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".ov.on").forEach(closeM); });
+document.body.style.overflow = "hidden";
+
+GROUPS.forEach(function (g) { $("sg").appendChild(new Option(mi(g), g)); $("f-g").appendChild(new Option(g, g)); });
+["sg", "su"].forEach(function (id) { $(id).addEventListener("change", function () { if (searched) { shown = PAGE; render(); } }); });
+function search(scroll) {
+  if (!$("sg").value && !$("su").value) { toast("রক্তের গ্রুপ অথবা উপজেলা নির্বাচন করুন।"); return; }
+  searched = true; shown = PAGE; render();
+  if (scroll) $("search").scrollIntoView({ behavior: "smooth" });
+}
+$("finder").addEventListener("submit", function (e) { e.preventDefault(); search(true); });
+$("moreb").addEventListener("click", function () { shown += PAGE; render(); });
+
+function render() {
+  $("s1").textContent = bn(DONORS.length); $("dc2").textContent = bn(DONORS.length);
+  $("gg").innerHTML = GROUPS.map(function (g) {
+    var n = DONORS.filter(function (d) { return d.g === g; }).length;
+    return '<button class="gt" type="button" data-g="' + g + '"><b class="lat">' + mi(g) + '</b><small>' + bn(n) + ' জন ডোনার</small></button>';
+  }).join("");
+  var list = $("list");
+  if (!searched) { $("rbar").hidden = true; $("more").hidden = true; list.innerHTML = ""; return; }
+  var g = $("sg").value, u = $("su").value;
+  var found = DONORS.filter(function (d) { return (!g || d.g === g) && (!u || d.u === u); });
+  $("rbar").hidden = false; $("rcnt").textContent = bn(found.length) + " জন";
+  $("more").hidden = found.length <= shown;
+  list.innerHTML = found.length ? found.slice(0, shown).map(function (d, i) {
+    return '<article class="dc" style="--i:' + (i % PAGE) + '"><div class="dt"><div class="av">' + esc((d.n || "?").trim().charAt(0)) + '</div><div><div class="dn">' + esc(d.n) + '</div><div class="dp">📍 ' + esc(d.u) + '</div></div><span class="bt lat">' + esc(mi(d.g)) + '</span></div><button class="btn bp" type="button" data-id="' + esc(digits(d.p)) + '">বিস্তারিত দেখুন</button></article>';
+  }).join("") : '<div class="empty"><b>এই শর্তে কোনো ডোনার পাওয়া যায়নি</b>অন্য রক্তের গ্রুপ বা উপজেলা বেছে আবার চেষ্টা করুন।<br><button class="btn bp" data-open="reg" type="button">ডোনার হিসেবে যুক্ত হোন</button></div>';
+  list.querySelectorAll("[data-open]").forEach(function (b) { b.addEventListener("click", function () { openM("reg"); }); });
+}
+$("gg").addEventListener("click", function (e) { var b = e.target.closest(".gt"); if (!b) return; $("sg").value = b.dataset.g; search(true); });
+$("list").addEventListener("click", function (e) {
+  var b = e.target.closest("[data-id]"); if (!b) return;
+  var d = DONORS.filter(function (x) { return digits(x.p) === b.dataset.id; })[0]; if (!d) return;
+  var ph = digits(d.p);
+  var item = function (l, v, full) { return v ? '<div class="it"' + (full ? ' style="grid-column:1/-1"' : "") + "><small>" + l + "</small><b>" + v + "</b></div>" : ""; };
+  $("dbody").innerHTML = '<div class="dl">' + item("নাম", esc(d.n)) + item("মোবাইল", '<a href="tel:' + esc(ph) + '">' + esc(ph) + "</a>") + item("রক্তের গ্রুপ", esc(d.g)) + item("জেন্ডার", esc(gender(d.s))) +
+    item("উপজেলা / থানা", esc(d.u)) + item("ওয়ার্ড", esc(d.w)) + item("রক্ত দিতে পারবেন", esc(d.t), true) + item("স্থায়ী ঠিকানা", esc(d.pm), true) + item("বর্তমান ঠিকানা", esc(d.c), true) +
+    '</div><div class="da"><a class="btn bp" href="tel:' + esc(ph) + '">📞 কল করুন</a><a class="btn bg" href="https://wa.me/88' + esc(ph) + '" target="_blank" rel="noopener">হোয়াটসঅ্যাপ</a></div><p class="nt">ডোনার এখন রক্ত দিতে পারবেন কি না, কল করে জেনে নিন।</p>';
+  openM("det");
+});
+
+var hasAPI = /^https:\/\/script\.google\.com\//.test(API);
+function loadDonors() {
+  if (!hasAPI) return;
+  try { var c = JSON.parse(localStorage.getItem("donors3") || "null"); if (c && c.length) { DONORS = c; render(); } } catch (e) {}
+  fetch(API).then(function (r) { return r.json(); }).then(function (l) {
+    if (!Array.isArray(l)) return; DONORS = l; render(); countUp($("dc2"), l.length); countUp($("s1"), l.length);
+    try { localStorage.setItem("donors3", JSON.stringify(l)); } catch (e) {}
+  }).catch(function () {});
+}
+$("rf").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var v = function (id) { return $(id).value.trim(); }, m = $("fmsg"), btn = $("fgo");
+  var d = { n: v("f-n"), p: digits(v("f-p")), g: v("f-g"), s: v("f-s"), u: v("f-u"), pm: v("f-pm"), c: v("f-c"), t: v("f-t"), website: v("f-w") };
+  if (!d.n || !d.g || !d.s || !d.u || !d.pm || !d.c || !d.t || !v("f-p")) { m.textContent = "* চিহ্নিত সব ঘর পূরণ করুন।"; return; }
+  if (!/^01[3-9]\d{8}$/.test(d.p)) { m.textContent = "সঠিক মোবাইল নম্বর দিন (১১ সংখ্যা, 01 দিয়ে শুরু)।"; return; }
+  if (!$("f-ok").checked) { m.textContent = "তথ্য প্রকাশে সম্মতি টিক দিন।"; return; }
+  var dup = "এই মোবাইল নম্বর দিয়ে আগেই নিবন্ধন করা হয়েছে। একই নম্বরে একবারই নিবন্ধন করা যায়।";
+  if (DONORS.some(function (x) { return digits(x.p) === d.p; })) { m.textContent = dup; return; }
+  var done = function () { $("rf").reset(); m.textContent = ""; closeM($("reg")); toast("✅ নিবন্ধন সম্পন্ন! আপনি এখন ডোনার তালিকায় যুক্ত হয়েছেন।"); };
+  if (!hasAPI) { DONORS.push(d); render(); done(); return; }
+  btn.disabled = true; m.textContent = "সংরক্ষণ হচ্ছে…";
+  fetch(API, { method: "POST", body: JSON.stringify(d) }).then(function (r) { return r.json(); }).then(function (res) {
+    if (res && res.ok) { done(); loadDonors(); }
+    else m.textContent = res && res.err === "dup" ? dup : "সংরক্ষণ হয়নি: " + ((res && res.err) || "আবার চেষ্টা করুন");
+  }).catch(function () { m.textContent = "ইন্টারনেট সমস্যা, আবার চেষ্টা করুন।"; })
+    .then(function () { btn.disabled = false; });
+});
+
+$("fcall").href = "tel:+" + ADMIN; $("fwa").href = "https://wa.me/" + ADMIN;
+render(); loadDonors();
+setTimeout(function () { countUp($("dc2"), DONORS.length); countUp($("s1"), DONORS.length); }, 1500);
+</script>
+</body>
+</html>
